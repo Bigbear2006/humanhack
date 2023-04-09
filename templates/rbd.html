@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Центр Инвест | Разработчик баз данных</title>
+    <link rel="stylesheet" type="text/css" href="src/style/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href='src/style/style.css'>
+    <link rel="stylesheet" type='text/css' href='src/style/rbd.css'>
+</head>
+<body>
+<section class="wrapper">
+    <header class="header">
+        <div class="header__container _container">
+            <div class="header__logo-menu">
+                <img src="src/assets/Centr-invest.svg" alt="#" class="header__img">
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="index.html" class="item__link home-page">Вакансии</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Бизнесу</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Ещё</a></li>
+                </ul>
+            </div>
+            <div class="header__button">
+                <button>Интернет-Банк</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container _container">
+            <h1>Тест для разработчиков баз данных</h1>
+
+            <form onsubmit="return validateAnswers()">
+                <p>1. Что такое первичный ключ?</p>
+                <input type="radio" name="answer1" value="a">Уникальный идентификатор записи в таблице<br>
+                <input type="radio" name="answer1" value="b">Столбец, содержащий целочисленные значения<br>
+                <input type="radio" name="answer1" value="c">Столбец, содержащий строковые значения<br>
+                <br>
+                <p>2. Что такое SQL?</p>
+                <input type="radio" name="answer2" value="a">Язык программирования<br>
+                <input type="radio" name="answer2" value="b">Язык структурированных запросов<br>
+                <input type="radio" name="answer2" value="c">Язык разметки гипертекста<br>
+                <br>
+                <p>3. Что такое индекс в базе данных?</p>
+                <input type="radio" name="answer3" value="a">Таблица, содержащая ссылки на другие таблицы<br>
+                <input type="radio" name="answer3" value="b">Структура данных, обеспечивающая быстрый доступ к записям в таблице<br>
+                <input type="radio" name="answer3" value="c">Столбец, содержащий уникальные значения<br>
+                <br>
+                <textarea name="q4" id="q4" cols="30" rows="5"></textarea>
+                <input type="submit" value="Проверить ответы">
+            </form>
+            <div class="main__button_zayavka"><a href="form1.html">Подать заявку</a></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__items">
+                <p class="footer__title">Частным лицам</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Кредитование</li>
+                    <li class="menu__item">Ипотека</li>
+                    <li class="menu__item">Рефинансирование</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">О банке</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Контакты</li>
+                    <li class="menu__item">Акционерам и инвесторам</li>
+                    <li class="menu__item">Офисы и банкоматы</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Это интересно!</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Зелёный вклад</li>
+                    <li class="menu__item">Зелёная ипотека</li>
+                    <li class="menu__item">Социальный вклад банка</li>
+                    <li class="menu__item">ESG-библиотека</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Связь с нами</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">8 800 200 99 29</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</section>
+<script src="src/rbd.js"></script>
+</body>
+</html>

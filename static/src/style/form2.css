@@ -1,0 +1,61 @@
+.person__vuz{
+    display: flex;
+    justify-content: flex-start;
+    min-width: 100%;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.vuz__name{
+
+}
+.vuz_year-start{
+
+}
+.vuz__year-end{
+
+}
+.person__special{
+    display: flex;
+    justify-content: flex-start;
+    min-width: 100%;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.special__faq{
+
+}
+.special__napravlenie{
+
+}
+.person__achievements{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 100%;
+    gap: 60px;
+}
+.person__mark{
+
+}
+.person__science{
+
+}
+.person__po{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 100%;
+    align-items: flex-end;
+}
+.po__have{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+

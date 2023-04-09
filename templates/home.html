@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <h1>Банк Центр-Инвест</h1>
+    <h3>Наши направления подготовки</h3>
+    {% for way in train_ways %}
+    <a href="{% url 'train_way_detail' way.pk %}"><h2>{{way.name}}</h2></a>
+    <p>{{way.description}}</p>
+    {% endfor %}
+</body>
+</html>

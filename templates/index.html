@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Центр Инвест</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'src/style/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'src/style/normalize.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="wrapper">
+    <header class="header">
+        <div class="header__container _container">
+            <div class="header__logo-menu">
+                <img src="{% static 'src/assets/Centr-invest.svg' %}" alt="#" class="header__img">
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="#" class="item__link home-page">Вакансии</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Бизнесу</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Ещё</a></li>
+                </ul>
+            </div>
+            <div class="header__button">
+                <button><a href="{% url 'create' %}">Заполнить анкету</a></button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container _container">
+            <h1 class="main__title">Список вакансий для стажировки/практики</h1>
+            <div class="main__vacant">
+                {% for way in train_ways %}
+                <div class="vacant__container">
+                    <div class="vacant__info-req">
+                        <div class="vacant__info">
+                            <h3 class="vacant__direct"><a href="" class="direct__link">{{way.name}}</a></h3>
+                            <p class="vacant__company">ООО АльтХаус</p>
+                        </div>
+                        <div class="vacant__req">
+                            <p class="req__title">Требования:</p>
+                            <ul class="req__subtitle">
+                                <li class="subtitle__item">{{way.description}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="vacant__button_cont">
+                        <a class="vacant__button" href="{% url 'test_detail' way.test.pk %}">Пройти тест</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__items">
+                <p class="footer__title">Частным лицам</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Кредитование</li>
+                    <li class="menu__item">Ипотека</li>
+                    <li class="menu__item">Рефинансирование</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">О банке</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Контакты</li>
+                    <li class="menu__item">Акционерам и инвесторам</li>
+                    <li class="menu__item">Офисы и банкоматы</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Это интересно!</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Зелёный вклад</li>
+                    <li class="menu__item">Зелёная ипотека</li>
+                    <li class="menu__item">Социальный вклад банка</li>
+                    <li class="menu__item">ESG-библиотека</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Связь с нами</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">8 800 200 99 29</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</section>
+<script src="src/source.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+{% load static %}
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Центр Инвест | Заявка</title>
+    <link rel="stylesheet" type='text/css' href='{% static "src/style/style.css" %}'>
+    <link rel="stylesheet" type='text/css' href='{% static "src/style/form1.css" %}'>
+    <link rel="stylesheet" type="text/css" href="{% static 'src/style/normalize.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</head>
+<body>
+<section>
+    <header class="header">
+        <div class="header__container _container">
+            <div class="header__logo-menu">
+                <img src="{% static 'src/assets/Centr-invest.svg' %}" alt="#" class="header__img">
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="index.html" class="item__link home-page">Вакансии</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Бизнесу</a></li>
+                    <li class="menu__item"><a href="#" class="item__link">Ещё</a></li>
+                </ul>
+            </div>
+            <div class="header__button">
+                <button>Интернет-Банк</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container _container">
+            <h1 class="main__title">Заявка</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="main__person_container">
+                    {% for field in form %}
+                    <div class="person__fio">
+                        <div class="fio__surname">
+                            <label>{{field.label}}</label>
+                            {{field}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button type="submit" class="btn btn-success">Отправить</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__items">
+                <p class="footer__title">Частным лицам</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Кредитование</li>
+                    <li class="menu__item">Ипотека</li>
+                    <li class="menu__item">Рефинансирование</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">О банке</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Контакты</li>
+                    <li class="menu__item">Акционерам и инвесторам</li>
+                    <li class="menu__item">Офисы и банкоматы</li>
+                    <li class="menu__item">Вклады</li>
+                    <li class="menu__item">Карты</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Это интересно!</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">Зелёный вклад</li>
+                    <li class="menu__item">Зелёная ипотека</li>
+                    <li class="menu__item">Социальный вклад банка</li>
+                    <li class="menu__item">ESG-библиотека</li>
+                </ul>
+            </div>
+            <div class="footer__items">
+                <p class="footer__title">Связь с нами</p>
+                <ul class="footer__menu">
+                    <li class="menu__item">8 800 200 99 29</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</section>
+</body>
+</html>
